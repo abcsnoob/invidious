@@ -1,7 +1,7 @@
 # Builder stage: Build the application using Crystal
 FROM crystallang/crystal:1.12.2-alpine AS builder
 
-# Install dependencies needed for building the app
+# Install dependencies needed for building the app (no Git)
 RUN apk add --no-cache sqlite-static yaml-static
 
 # Set the build argument to control release version
